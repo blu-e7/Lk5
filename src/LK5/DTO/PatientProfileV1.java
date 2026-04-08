@@ -35,6 +35,7 @@ public class PatientProfileV1 implements MedicalRecord, Versioned, Confidential 
 
     @Override
     public void maskSensitiveData() {
+        // Jika data ada, maka nilainya diganti dengan "******" untuk menyembunyikannya dari user yang aksesnya kurang.
         if (this.data != null) {
             this.data = "******"; // Logika masking
         }

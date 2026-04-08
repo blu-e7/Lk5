@@ -11,6 +11,8 @@ import LK5.Interface.MedicalRecord;
  *
  * @author FICKY
  */
+// Generic Class menggunakan Bounded Type Parameters (<T extends ...>).
+// Artinya, T di sini hanya bisa diisi oleh class yang mengimplementasikan MedicalRecord DAN Confidential.
 public class SecureResponse<T extends MedicalRecord & Confidential> {
     private boolean success;
     private T data;
